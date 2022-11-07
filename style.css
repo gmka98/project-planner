@@ -1,0 +1,32 @@
+body{
+    background-image: url("/image/listback.jpeg");
+    ba
+}
+h1{
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+h2{
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    color: red;
+    display: flex;
+    padding: 10px;
+    background-color: black;
+}
+    
+#myInput{
+    display: flex;
+    margin: auto;
+    justify-content: center;
+}    
+
+
+#addtask{
+     display: flex;
+     flex: auto;
+}
