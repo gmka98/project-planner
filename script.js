@@ -1,71 +1,51 @@
-const WeatherForm = document.getElementById("cityName") 
-const weatherByDay = [[],[], [], [],]
-const container = document.querySelector('.container')
+//create the "ul" and "li" tag and connect them  
+const body = document.querySelector("body")
+const Ul = document.createElement("ul")
+const Id = document.createElement
+const Li = document.createElement("li")
+const union = Ul.appendChild(Li)
+ body.appendChild(Ul)
+//Create a new list item when clicking on the "Add" button
 
-//always start by the fetch event if you don't know how to do it
-//fetch it's like call someone with the phone 
-const getWeather = (cityName) => {
-    fetch("api.openweathermap.org/data/2.5/forecast?lat=50.8465573&lon=4.3517103&appid=2f18dd87e2e6152f8d814353efa9564a")
-     //put your Api key
-    .then(response => response.json())//json = Javascript
-    .then((data) =>{
+function newTask(){
+    const Ul = document.querySelector("ul");Ul.setAttribute('#myUl');
+    const input = document.getElementById("myInput").value
+    const txt = document.createTextNode(inputValue)
+    list.appendChild(txt)
+
+    if(inputValue === ''){
+        alert("Enter some task name! young JOHNSON!!")
+    }
     
-        console.log(data[0].lat, data[0].lon) 
-        
-        fetch(    fetch("api.openweathermap.org/data/2.5/forecast?lat=50.8465573&lon=4.3517103&appid=2f18dd87e2e6152f8d814353efa9564a")
-        .then(response => response.json()
-        .then((data) => {
-            let i=0
-            let c =0
-            
-            data.list.forEach((weatherEntry) => {
-                if(i<8){
-                weatherByDay[0].push(weatherEntry)
-                }
-                
-                else{
-                    weatherByDay[0].push(weatherEntry)
-
-                    c++
-                    i=0
-                }
-
-                i++;
-
-            });
-            
-        console.log(weatherByDay)
-       
-        
-            weatherByDay.forEach((day) => {
-            
-                let d = document.createElement('div')
-                let title = document.createElement('h1')
-                title.innerText = day[0].dt_txt
-                container.append(d)
-                day.forEach((temp)=> {
-                let desc = document.createElement('p')
-                p.innerText= temp.main.temp
-                d.append(desc)
-
-            })
-        })
-
-    })    
-        ))   
-
-        
-        // My API key=2f18dd87e2e6152f8d814353efa9564a
-
-    })
+    else{
+       document.getElementById('myInput').value = ""
 }
 
-//API key = It's a authentification
 
-WeatherForm.addEventListener('submit' , (event) => {
-    
-    event.preventDefault()
-    let formData = Object.fromEntries(new FormData(WeatherForm));
-    getWeather(formData.city)
-})
- //http://api.openweathermap.org/geo/1.0/direct?q=${cityName}
+const span = document.createElement("SPAN")
+const textNode = document.createTextNode("\u00D7")
+span.className = "close";
+span.appendChild(textNode);
+NodeISY[z].appendChild(span);
+
+
+for (i = 0; i < close.length; i++) {
+    close[z].onclick = function(){
+        const div = this.parentElement;
+        div.style.display = "none";
+    }
+}
+}
+
+//create a "close" button and append it to each list item
+const NodeISY = document.querySelector("li")
+var z;
+
+for (z = 0; z < NodeISY.lenght; z++) {
+const span = document.createElement("SPAN")
+const textNode = document.createTextNode("\u00D7")
+span.className = "close";
+span.appendChild(textNode);
+NodeISY[z].appendChild(span)
+
+}
